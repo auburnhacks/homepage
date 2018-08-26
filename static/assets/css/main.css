@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400');
-@import './font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Open%20Sans');
+@font-face {
+	font-family: myriadPro;
+	src: url('../fonts/Myriad-Pro.ttf');
+}
+
+.material-icons {
+	font-size: 60px !important;
+}
 
 /* Reset */
 
@@ -1617,11 +1624,8 @@
 	}
 
 	body {
-		background-color: darkgray;
 		background-image: url("../../images/background.jpg");
-		/* background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%); */
+		background-repeat: no-repeat;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1635,15 +1639,18 @@
 			transition: none !important;
 		}
 
+		.blue_back {
+			background-color: #03244d;
+		}
 /* Type */
 
 	body {
-		background-color: white;
+		background-color: #03244d;
 		color: rgba(255, 255, 255, 0.65);
 	}
 
 	body, input, select, textarea {
-		font-family: 'Nunito', sans-serif;
+		font-family: 'Open Sans', sans-serif;
 		font-size: 17pt;
 		font-weight: 300;
 		line-height: 1.65;
@@ -1778,7 +1785,7 @@
 	code {
 		border-radius: 8px;
 		border: solid 1px;
-		font-family: 'Nunito', sans-serif;
+		font-family: 'Open Sans', sans-serif;
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
@@ -1786,7 +1793,7 @@
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: 'Nunito', sans-serif;
+		font-family: 'Open Sans', sans-serif;
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
 	}
@@ -2090,7 +2097,7 @@
 		.select-wrapper:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: Nunito;
+			font-family: Open Sans;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -2154,7 +2161,7 @@
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: Nunito;
+				font-family: Open Sans;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -2293,7 +2300,7 @@
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: Nunito;
+			font-family: Open Sans;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -2509,6 +2516,10 @@
 				display: inline-block;
 				padding: 0 0.65em 0 0;
 			}
+			
+			ul.icons li img {
+				width: 50px;
+			}
 
 				ul.icons li:last-child {
 					padding-right: 0 !important;
@@ -2664,7 +2675,9 @@
 	}
 
 		header.major h2 {
+			font-family: myriadPro;
 			font-size: 2em;
+			color: #03244d;
 		}
 
 			header.major h2:after {
@@ -3025,13 +3038,14 @@
 			margin-left: 4em;
 			padding: 0.65em;
 			border-radius: 100%;
-			border: solid 1px;
+			border: none;
 		}
 
 			.spotlight .image img {
 				display: block;
 				border-radius: 100%;
-				width: 16em;
+				width: 250px;
+				height: 250px;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -3075,7 +3089,8 @@
 			}
 
 				.spotlight .image img {
-					width: 12em;
+					width: 150px;
+					height: 150px;
 				}
 
 		}
@@ -3327,7 +3342,7 @@
 					line-height: 2.25em;
 					padding: 0 1.25em;
 					border: 0;
-					border-radius: 8px;
+					border-radius: 50px;
 					box-shadow: inset 0 0 0 1px transparent;
 				}
 
@@ -3336,8 +3351,9 @@
 					}
 
 					#nav ul li a.active {
-						background-color: #ffffff;
+						background-color: #f68026;
 						box-shadow: none;
+						color: white;
 					}
 
 		#nav.alt {
@@ -3390,7 +3406,7 @@
 			color: #636363;
 		}
 
-		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+		#main h1, #main h3, #main h4, #main h5, #main h6 {
 			color: #636363;
 		}
 
@@ -3579,11 +3595,11 @@
 		}
 
 		#main header.major h2:after {
-			background-color: #dddddd;
-			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+			background-color: #dd550c;
+			background-image: -moz-linear-gradient(90deg, #dd550c);
+			background-image: -webkit-linear-gradient(90deg, #dd550c);
+			background-image: -ms-linear-gradient(90deg, #dd550c);
+			background-image: linear-gradient(90deg, #dd550c);
 		}
 
 		#main table tbody tr {
