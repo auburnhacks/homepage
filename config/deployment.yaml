@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: au-hacks-landing
+    namespace: default
+    labels:
+        app: au-hacks-landing
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: au-hacks-landing
+    template:
+        metadata:
+            labels:
+                app: au-hacks-landing
+        spec:
+            containers:
+            - name: server
+              image: kirandasika30/au-hacks-landing
+              imagePullPolicy: Always
+              ports:
+              - containerPort: 8321

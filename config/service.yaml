@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:  
+  name: au-hacks-landing-service 
+spec:
+  selector:    
+    app: au-hacks-landing 
+  type: NodePort
+  ports:  
+  - name: http
+    port: 80
+    targetPort: 8321 
+    nodePort: 30036 
+    protocol: TCP
