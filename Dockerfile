@@ -9,4 +9,4 @@ COPY ./main .
 # Copy static assets from current directory
 COPY ./static/. ./static
 EXPOSE 8321
-ENTRYPOINT ["./main", "--listen_addr=:8321"]
+ENTRYPOINT ["./main"]

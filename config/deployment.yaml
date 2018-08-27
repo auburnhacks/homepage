@@ -21,3 +21,5 @@ spec:
               imagePullPolicy: Always
               ports:
               - containerPort: 8321
+              args:
+              - --listen_addr=:8321
