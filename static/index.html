@@ -63,7 +63,7 @@
 											the box, and push the limits on what they can build using technology.
 										</p>
 									</div>
-									<span class="image blue_back"><img src="https://cdn.auburn.edu/2016/_assets/images/thisisauburn_stack.svg"/></span>
+									<span class="image blue_back"><img src="./images/auburn_logo.svg"/></span>
 								</div>
 							</section>
 
@@ -72,30 +72,60 @@
 								<header class="major">
 									<h2>Information</h2>
 								</header>
-								<h3>What is a hackathon? Are we hacking anything?</h3>
-								<p>
-									We aren't "hackers" as you would normally think of them. Hacking, in this context, involves working on a team (or alone, if you wish!) to put together a website, application, etc.
-									This will be a 24-hour event that will encourage you to innovate and build something cool, or just learn something new, in the span of a weekend.
-								</p>
-								<h3>When is AuburnHacks?</h3>
-								<p>
-									The event will take place on the weekend of February 2 (Saturday), 2019 and conclude the following Sunday afternoon.
-								</p>
-								<h3>Where is AuburnHacks?</h3>
-								<p>
-									It will be in the Auburn University Student Center Ballroom, located at 255 Heisman Dr, Auburn, AL 36849.
-									Parking will be available in the parking deck next to the building (map coming soon).
-								</p>
-								<h3>What do I need to bring?</h3>
-								<p>
-									Bring your computer and whatever else you will need to code! Also, since it is an overnight event, bring a toothbrush as well as a sleeping bag!
-									We will provide food and drinks, so you can focus on programming!
-								</p>
-								<h3>What if I don't know how to code?</h3>
-								<p>
-									No worries at all! We welcome participants of all majors and grade levels. Everyone can bring something to the table, and if you just want to hang out and learn from our mentors, you may do so as well!
-									Hackathons are a learning experience for everyone, so AuburnHacks will encourage that type of environment.
-								</p>
+
+								<div class="grid">
+									<div class="card-container">
+										<div class="card">
+											<h3 id="question">What is a hackathon? Are we hacking anything?</h3>
+											<div id="answer">
+												We aren't "hackers" as you would normally think of them. Hacking, 
+												in this context, involves working on a team (or alone, if you wish!) 
+												to put together a website, application, etc. This will be a 24-hour 
+												event that will encourage you to innovate and build something cool, 
+												or just learn something new, in the span of a weekend.
+											</div>
+										</div>
+									</div>
+									
+									<div class="card-container">
+										<div class="card">
+											<h3 id="question"> When is AuburnHacks?</h3>
+											<div id="answer">The event will take place on the weekend of February 2 
+												(Saturday), 2019 and conclude the following Sunday afternoon.</div>
+										</div>
+									</div>
+									
+									<div class="card-container">
+										<div class="card">
+											<h3 id="question">Where is AuburnHacks?</h3>
+											<div id="answer">It will be in the Auburn University Student Center Ballroom, 
+												located at 255 Heisman Dr, Auburn, AL 36849. Parking will be available 
+												in the parking deck next to the building (map coming soon).</div>
+										</div>
+									</div>
+										
+									<div class="card-container">
+										<div class="card">
+											<h3 id="question">What do I need to bring?</h3>
+											<div id="answer">Bring your computer and whatever else you will need to code!
+												 Also, since it is an overnight event, bring a toothbrush as well as a sleeping bag! 
+												 We will provide food and drinks, so you can focus on programming!</div>
+										</div>
+									</div>
+
+									<div class="card-container">
+										<div class="card">
+											<h3 id="question">What if I don't know how to code?</h3>
+											<div id="answer">No worries at all! We welcome participants of all majors and grade 
+												 levels. Everyone can bring something to the table, and if you just want to hang
+												 out and learn from our mentors, you may do so as well! 
+												 Hackathons are a learning experience for everyone, so AuburnHacks will 
+												 encourage that type of environment.</div>
+										</div>
+									</div>
+
+								</div>
+
 							</section>
 
 						<!-- Second Section -->
@@ -106,9 +136,9 @@
 								<p>This event would not have been possible without the support 
 									shown to us by the Auburn University's Computer Science and Software Engineering Department 
 									and all of our sponsors.</p>
-								<p>If you would like to sponsor our event, check out our prospectus 
-									<u><a href="assets/documents/AuburnHacks 2019 Prospectus.pdf">here</a></u> 
-									and reach out to us at <u><a href="mailto:staff@auburnhacks.com">staff@auburnhacks.com!</a></u></p>
+								<p>If you would like to sponsor our event, check out our prospectus and reach out to us at 
+									<u><a href="mailto:staff@auburnhacks.com">staff@auburnhacks.com!</a></u></p>
+									<a class="button" href="./assets/documents/AuburnHacks 2019 Prospectus.pdf">View our Prospectus</a>
 							</section>
 
 						<!-- Registration -->
@@ -154,5 +184,18 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+				function toggleButton() {
+					var x = document.getElementById("front");
+					var y = document.getElementById("back");
+					if (x.style.display === "block") {
+						x.style.display = "none";
+						y.style.display = "block";
+					} else if (y.style.display === "block") {
+						y.style.display = "none";
+						x.style.display = "block";
+					}
+				}
+			</script>
 	</body>
 </html>
