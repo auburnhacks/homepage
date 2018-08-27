@@ -1624,8 +1624,6 @@
 	}
 
 	body {
-		background-image: url("../../images/background.jpg");
-		background-repeat: no-repeat;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1645,7 +1643,7 @@
 /* Type */
 
 	body {
-		background-color: #03244d;
+		background-color: #383838;
 		color: rgba(255, 255, 255, 0.65);
 	}
 
