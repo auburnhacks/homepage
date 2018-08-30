@@ -21,3 +21,5 @@ kube:
 	kubectl apply -f ./config/deployment.yaml 
 	@echo "Running service"
 	kubectl apply -f ./config/service.yaml 
+	@echo "Running ingress service"
+	kubectl apply -f ./config/ingress.yml
