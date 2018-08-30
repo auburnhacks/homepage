@@ -1,9 +1,10 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: global-ingress
+  name: root-ingress 
   annotations:
     kubernetes.io/ingress.class: traefik
+    traefik.frontend.rule.type: PathPrefixStrip
 spec:
   rules:
     - host: auburnhacks.com
@@ -20,3 +21,4 @@ spec:
             backend:
               serviceName: landing-svc
               servicePort: http
+
