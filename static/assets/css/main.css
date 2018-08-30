@@ -6,7 +6,7 @@
 
 /* Personalized */
 .grid {
-	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 	grid-gap: 5px;
 	display: grid;
 }
@@ -18,8 +18,8 @@
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	width: 280px;
-	height: 280px !important;
+	width: 290px;
+	height: 290px !important;
 }
 
 .card {
@@ -74,6 +74,19 @@
 	text-decoration: none;
 	color: white !important;
 	transition: all 0.3s;
+}
+
+.mapouter {
+	text-align:right;
+	height:300px;
+	width:auto;
+}
+
+.gmap_canvas {
+	overflow:hidden;
+	background:none!important;
+	height:300px;
+	width:auto;
 }
 
 /* Reset */
