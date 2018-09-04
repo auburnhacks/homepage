@@ -4,6 +4,9 @@
 		<title>AuburnHacks 2019</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css">
+
+		<!-- Favicon settings -->
 		<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
@@ -11,208 +14,212 @@
 		<link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#da532c">
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" href="assets/css/main.css">
-		<link rel="icon" href="./favicon.ico">
-		<!-- Global site tag (gtag.js) - Google Analytics -->
+		
+		<!-- Google Analytics Tracker -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124906144-1"></script>
 		<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'UA-124906144-1');
 		</script>
 	</head>
 	<body>
 		<!-- MLH Trust Badge -->
-		<!-- <a id="mlh-trust-badge" 
-			style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:11000" 
-			href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=blue" 
-			target="_blank">
-			<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-blue.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%">
-		</a> -->
+		<a id="mlh-trust-badge" target="_blank"
+			href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=blue">
+			<img alt="Major League Hacking 2019 Hackathon Season" 
+				src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" style="width:100%">
+		</a>
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 				<!-- Header -->
-					<header id="header" class="alt">
+				<header id="header" class="alt">
+					<section>
 						<div id= "circle">
-							<img src="images/logo.svg" class="logo" style="z-index: 2; margin-top: -15%; margin-bottom: -20%; height: 70%; width: 70%;"/>
+							<img src="images/logo.svg" class="logo" style="z-index: 2; margin-top: -15%; margin-bottom: -20%; height: 70%; width: 70%;">
 						</div>
 						<h1 style="font-family:myriadPro;">AuburnHacks</h1>
 						<h2 style="font-family:myriadPro;">February 2, 2019</h2>
 						<p>Auburn University's First Hackathon</p>
-					</header>
+					</section>
+				</header>
 
-				<!-- Navigation bar (desktop viewport only) -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#aboutUs" class="active">About Us</a></li>
-							<li><a href="#information">Information</a></li>
-							<li><a href="#location">Location</a></li>
-							<li><a href="#sponsors">Sponsors</a></li>
-							<li><a href="#registration">Registration</a></li>
-						</ul>
-					</nav>
+				<!-- Navigation bar (>768px viewport only) -->
+				<nav id="nav">
+					<ul>
+						<li><a href="#aboutUs" class="active">About Us</a></li>
+						<li><a href="#information">Information</a></li>
+						<li><a href="#location">Location</a></li>
+						<li><a href="#sponsors">Sponsors</a></li>
+						<li><a href="#registration">Registration</a></li>
+					</ul>
+				</nav>
 
 				<!-- Main -->
-					<div id="main">
+				<div id="main">
 						<!-- About Us -->
-							<section id="aboutUs" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>About Us</h2>
-										</header>
-										<p>
-											We are Auburn University’s first-ever programming event organized by students,
-											for students. With this hackathon, Auburn University's Computer Science &amp; 
-											Software Engineering strives to promote technical innovation and highlight 
-											students’ skills and abilities. Partnering with Major League Hacking (MLH) 
-											for the first time, we aim to bring out the best and brightest students, 
-											not just from Auburn University but from other universities all over the United 
-											States.
-										</p>
-										<p>
-											On February 2, 2019, this 24-hour,
-											full-steam-ahead event will challenge participants to learn, think outside 
-											the box, and push the limits on what they can build using technology.
-										</p>
-									</div>
-									<span class="image blue_back"><img src="./images/auburn_logo.svg"/></span>
+						<section id="aboutUs" class="main">
+							<div class="spotlight">
+								<div class="content">
+									<header class="major">
+										<h2>About Us</h2>
+									</header>
+									<p>
+										We are Auburn University’s first-ever programming event organized by students,
+										for students. With this hackathon, Auburn University's Computer Science &amp; 
+										Software Engineering strives to promote technical innovation and highlight 
+										students’ skills and abilities. Partnering with Major League Hacking (MLH) 
+										for the first time, we aim to bring out the best and brightest students, 
+										not just from Auburn University but from other universities all over the United 
+										States.
+									</p>
+									<p>
+										On February 2, 2019, this 24-hour,
+										full-steam-ahead event will challenge participants to learn, think outside 
+										the box, and push the limits on what they can build using technology.
+									</p>
 								</div>
-							</section>
+								<span class="image blue_back"><img src="./images/auburn_logo.svg"/></span>
+							</div>
+						</section>
 
-							<!-- Information Section -->
-							<section id="information" class="main special">
-								<header class="major">
-									<h2>Information</h2>
-								</header>
+						<!-- Information Section -->
+						<section id="information" class="main special">
+							<header class="major">
+								<h2>Information</h2>
+							</header>
 
-								<div class="grid">
-									<div class="card-container">
-										<div class="card">
-											<h3 id="question">What is a hackathon? Are we hacking anything?</h3>
-											<p id="answer">
-												We aren't "hackers" as you would normally think of them. Hacking, 
-												in this context, involves working on a team (or alone, if you wish!) 
-												to put together a website, application, etc. This will be a 24-hour 
-												event that will encourage you to innovate and build something cool, 
-												or just learn something new, in the span of a weekend.
-											</p>
-										</div>
-									</div>
-									
-									<div class="card-container">
-										<div class="card">
-											<h3 id="question"> When is AuburnHacks?</h3>
-											<p id="answer">The event will take place on the weekend of February 2 
-												(Saturday), 2019 and conclude the following Sunday afternoon.</p>
-										</div>
-									</div>
-									
-									<div class="card-container">
-										<div class="card">
-											<h3 id="question">Where is AuburnHacks?</h3>
-											<p id="answer">It will be in the Auburn University Student Center Ballroom, 
-												located at 255 Heisman Dr, Auburn, AL 36849. Parking will be available 
-												in the parking deck next to the building (see below).
-											</p>
-										</div>
-									</div>
-										
-									<div class="card-container">
-										<div class="card">
-											<h3 id="question">What do I need to bring?</h3>
-											<p id="answer">Bring your computer and whatever else you will need to code!
-												 Also, since it is an overnight event, bring a toothbrush as well as a sleeping bag! 
-												 We will provide food and drinks, so you can focus on programming!
-												</p>
-										</div>
-									</div>
-
-									<div class="card-container">
-										<div class="card">
-											<h3 id="question">What if I don't know how to code?</h3>
-											<p id="answer">No worries at all! We welcome participants of all majors and grade 
-												 levels. Everyone can bring something to the table, and if you just want to hang
-												 out and learn from our mentors, you may do so as well! 
-												 Hackathons are a learning experience for everyone, so AuburnHacks will 
-												 encourage that type of environment.
-												</p>
-										</div>
+							<div class="grid">
+								<div class="card-container">
+									<div class="card">
+										<h3 id="question">What is a hackathon? Are we hacking anything?</h3>
+										<p id="answer">
+											We are not "hackers" as you would normally think of them. Hacking, 
+											in this context, involves working on a team (or alone, if you wish!) 
+											to put together a website, application, etc. This will be a 24-hour 
+											event that will encourage you to innovate and build something cool, 
+											or just learn something new, in the span of a weekend.
+										</p>
 									</div>
 								</div>
-							</section>
-
-							<!-- Location Section -->
-							<section id="location" class="main special">
-								<header class="major">
-									<h2>Location</h2>
-								</header>
 								
-								<div class="mapouter">
-									<div class="gmap_canvas">
-										<iframe width="100%" height="300px" id="gmap_canvas" src="https://maps.google.com/maps?q=auburn%20university%2C%20student%20center&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+								<div class="card-container">
+									<div class="card">
+										<h3 id="question"> When is AuburnHacks?</h3>
+										<p id="answer">The event will take place on the weekend of February 2 
+											(Saturday), 2019 and conclude the following Sunday afternoon.</p>
 									</div>
 								</div>
-							</section>
+								
+								<div class="card-container">
+									<div class="card">
+										<h3 id="question">Where is AuburnHacks?</h3>
+										<p id="answer">It will be in the Auburn University Student Center Ballroom, 
+											located at 255 Heisman Dr, Auburn, AL 36849. Parking will be available 
+											in the parking deck next to the building (see below).
+										</p>
+									</div>
+								</div>
+									
+								<div class="card-container">
+									<div class="card">
+										<h3 id="question">What do I need to bring?</h3>
+										<p id="answer">Bring your computer and whatever else you will need to code!
+												Also, since it is an overnight event, bring a toothbrush as well as a sleeping bag! 
+												We will provide food, drinks, and caffeine, so you can focus on programming!
+											</p>
+									</div>
+								</div>
 
-							<!-- Sponsors Section -->
-							<section id="sponsors" class="main special">
-								<header class="major">
-									<h2>Sponsors</h2>
-								</header>
-								<p>This event would not have been possible without the support 
-									shown to us by Auburn University's Computer Science &amp; Software Engineering Department 
-									and all of our sponsors.</p>
-								<p>If you would like to sponsor our event, check out our prospectus and reach out to us at 
-									<u><a href="mailto:staff@auburnhacks.com">staff@auburnhacks.com!</a></u></p>
-									<a class="button" href="./assets/documents/prospectus.pdf" target="_blank">View our Prospectus</a>
-							</section>
+								<div class="card-container">
+									<div class="card">
+										<h3 id="question">What if I don't know how to code?</h3>
+										<p id="answer">No worries at all! We welcome participants of all majors and grade 
+												levels. Everyone can bring something to the table, and if you just want to hang
+												out and learn from our mentors, you may do so as well! 
+												Hackathons are a learning experience for everyone, so AuburnHacks will 
+												encourage that type of environment.
+											</p>
+									</div>
+								</div>
+							</div>
+						</section>
 
-							<!-- Registration -->
-							<section id="registration" class="main special">
-								<header class="major">
-									<h2>Registration</h2>
-								</header>
-								<p>We will begin registration in October 2018.</p>
-								<p>Until then, stay tuned!</p>
-								<!-- <footer class="major">
-									<ul class="actions">
-										<li><a href="//" class="button">Register!</a></li>
-									</ul>
-								</footer> -->
-							</section>
+						<!-- Location Section -->
+						<section id="location" class="main special">
+							<header class="major">
+								<h2>Location</h2>
+							</header>
+							
+							<div class="mapouter">
+								<div class="gmap_canvas">
+									<iframe width="100%" height="300px" id="gmap_canvas" src="https://maps.google.com/maps?q=auburn%20university%2C%20student%20center&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+								</div>
+							</div>
+						</section>
 
-					</div>
+						<!-- Sponsors Section -->
+						<section id="sponsors" class="main special">
+							<header class="major">
+								<h2>Sponsors</h2>
+							</header>
+							<p>This event would not have been possible without the support 
+								shown to us by Auburn University's Computer Science &amp; Software Engineering Department 
+								and all of our sponsors.</p>
+							<p>If you would like to sponsor our event, check out our prospectus and reach out to us at 
+								<u><a href="mailto:staff@auburnhacks.com">staff@auburnhacks.com!</a></u></p>
+								<a class="button" href="./assets/documents/prospectus.pdf" target="_blank">View our Prospectus</a>
+						</section>
 
-				<!-- Footer -->
-				<footer id="footer">
-					<section>
-						<h2>Get Connected!</h2>
-						<dl class="alt">
-							<dt>Address</dt>
-							<dd>255 Heisman Drive &bull; Auburn, AL 36849 &bull; USA</dd>
-							<dt>Email</dt>
-							<dd><a href="mailto:staff@auburnhacks.com?subject=AuburnHacks%202019:%20Inquiry" target="top">staff@auburnhacks.com</a></dd>
-						</dl>
-						<ul class="icons">
-							<li><a href="https://www.twitter.com/AuburnHacks" target="_blank"><img src="https://auburn.edu/administration/housing/images/homepage/getConnectedIcons/twitterOrange.svg"></a></li>
-							<li><a href="https://www.facebook.com/AuburnHacks" target="_blank"><img src="https://auburn.edu/administration/housing/images/homepage/getConnectedIcons/facebookOrange.svg"></a></li>
-							<li><a href="https://www.instagram.com/AuburnHacks" target="_blank"><img src="https://auburn.edu/administration/housing/images/homepage/getConnectedIcons/instagramOrange.svg"></a></li>
-						</ul>
-					</section>
+						<!-- Registration -->
+						<section id="registration" class="main special">
+							<header class="major">
+								<h2>Registration</h2>
+							</header>
+							<p>We will begin registration in October 2018.</p>
+							<p>Until then, stay tuned!</p>
+							<!-- <footer class="major">
+								<ul class="actions">
+									<li><a href="//" class="button">Register!</a></li>
+								</ul>
+							</footer> -->
+						</section>
 
-				</footer>
-			</div>
+				</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section>
+					<h2>Stay Connected!</h2>
+					<dl class="alt">
+						<dt>Address</dt>
+						<dd>255 Heisman Drive &bull; Auburn, AL 36849 &bull; USA</dd>
+						<dt>Email</dt>
+						<dd><a href="mailto:staff@auburnhacks.com?subject=AuburnHacks%202019:%20Inquiry" target="top">staff@auburnhacks.com</a></dd>
+					</dl>
+					<ul class="icons">
+						<li><a href="https://www.twitter.com/AuburnHacks" target="_blank"><img src="https://auburn.edu/administration/housing/images/homepage/getConnectedIcons/twitterOrange.svg"></a></li>
+						<li><a href="https://www.facebook.com/AuburnHacks" target="_blank"><img src="https://auburn.edu/administration/housing/images/homepage/getConnectedIcons/facebookOrange.svg"></a></li>
+						<li><a href="https://www.instagram.com/AuburnHacks" target="_blank"><img src="https://auburn.edu/administration/housing/images/homepage/getConnectedIcons/instagramOrange.svg"></a></li>
+					</ul>
+				</section>
+
+			</footer>
+		</div>
 
 		<!-- Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src='./assets/js/jquery.fullpage.min.js'></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<script type="text/javascript">
+			$('#fullpage').fullpage();
+		</script>
 	</body>
 </html>

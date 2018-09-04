@@ -1,10 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Open%20Sans');
-@font-face {
-	font-family: myriadPro;
-	src: url('../fonts/Myriad-Pro.ttf');
+@font-face { font-family: myriadPro; src: url('../fonts/Myriad-Pro.ttf'); }
+
+/* Personalization */
+#mlh-trust-badge {
+	display: block;
+	max-width: 100px;
+	min-width: 60px;
+	position: fixed;
+	right: 50px;
+	top: 0;
+	width: 10%;
+	z-index: 11000;
 }
 
-/* Personalized */
+#fullpage {
+	height: 100vh;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 500px) {
+	#mlh-trust-badge {
+		right: 15px;
+	}
+}
 .grid {
 	grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 	grid-gap: 5px;
@@ -65,7 +83,7 @@
 
 @media only screen and (max-width: 768px) {
 	.button {
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 
@@ -173,8 +191,8 @@
 /* Type */
 
 	body {
-		background-color: #03244d;
-		color: rgba(255, 255, 255, 0.65);
+		background-image: url(../../images/background.svg);
+		color: rgb(255, 255, 255);
 	}
 
 	body, input, select, textarea {
