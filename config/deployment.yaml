@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: au-hacks-landing
+    name: au-hacks-landing 
     namespace: default
     labels:
         app: au-hacks-landing
 spec:
-    replicas: 1
+    replicas: 2
     selector:
         matchLabels:
             app: au-hacks-landing
@@ -25,9 +25,9 @@ spec:
               - --listen_addr=:8321
               resources:
                 requests:
-                  cpu: "100m"
-                  memory: "250Mi"
+                  cpu: "20m"
+                  memory: "50Mi"
                 limits:
-                  cpu: "120m"
-                  memory: "300Mi"
+                  cpu: "50m"
+                  memory: "100Mi"
 
