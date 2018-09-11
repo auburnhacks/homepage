@@ -9,7 +9,7 @@ release:
 	go build -a \
 	-ldflags '-extldflags "-static"' \
 	-installsuffix cgo \
-	-o main .
+	-o frontend .
 	@echo "Built binary"
 	@echo "Building docker container"
 	docker build -t "kirandasika30/au-hacks-landing" -f Dockerfile .

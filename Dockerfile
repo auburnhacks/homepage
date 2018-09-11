@@ -5,8 +5,8 @@ RUN apk update \
     && apk add ca-certificates \
     && rm -rf /var/cache/apk/*
 # Copy executable from current directory
-COPY ./main .
+COPY ./frontend .
 # Copy static assets from current directory
 COPY ./static/. ./static
 EXPOSE 8321
-ENTRYPOINT ["./main"]
+ENTRYPOINT ["./frontend"]
