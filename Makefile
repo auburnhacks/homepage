@@ -1,3 +1,4 @@
+SHA=$(shell git rev-parse HEAD)
 all:
 	@echo "Building server"
 	go build -o main
@@ -6,7 +7,7 @@ release:
 	@echo "Building binary for linux..."
 	CGO_ENABLED=0 \
 	GOOS=linux \
-	go build -a \
+	go build -v -a \
 	-ldflags '-extldflags "-static"' \
 	-installsuffix cgo \
 	-o frontend .
@@ -14,6 +15,18 @@ release:
 	@echo "Building docker container"
 	docker build -t "kirandasika30/au-hacks-landing" -f Dockerfile .
 	docker push "kirandasika30/au-hacks-landing:latest"
+release_sha:
+	@echo "Building binary for linux..."
+	CGO_ENABLED=0 \
+	GOOS=linux \
+	go build -v -a \
+	-ldflags '-extldflags "-static"' \
+	-installsuffix cgo \
+	-o frontend .
+	@echo "Built binary"
+	@echo "Building docker container"
+	docker build -t "kirandasika30/au-hacks-landing:$(SHA)" -f Dockerfile .
+	docker push "kirandasika30/au-hacks-landing:$(SHA)"
 clean:
 	rm main
 kube:
