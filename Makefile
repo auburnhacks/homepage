@@ -17,7 +17,7 @@ release:
 	docker push "kirandasika30/au-hacks-landing:latest"
 release_sha:
 	@echo "Building binary for linux..."
-	GOOS=linux go build -a --ldflags '-extflags	"-static"' -tags netgo -installstuffix netgo .
+	GOOS=linux go build -v -a --ldflags '-extldflags	"-static"' -tags netgo -installsuffix netgo -o frontend
 	@echo "Built binary"
 	@echo "Building docker container"
 	docker build -t "kirandasika30/au-hacks-landing:$(SHA)" -f Dockerfile .
