@@ -12,6 +12,7 @@ import (
 
 type SponsorLevel string
 
+// all different SponsorLevels
 const (
 	Kilo SponsorLevel = "kilo"
 	Mega SponsorLevel = "mega"
