@@ -15,13 +15,13 @@
 			$main = $('#main');
 
 		// Disable animations/transitions until the page has loaded.
-		$body.addClass('is-loading');
+		// $body.addClass('is-loading');
 
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-loading');
-			}, 25);
-		});
+		// $window.on('load', function() {
+		// 	window.setTimeout(function() {
+		// 		$body.removeClass('is-loading');
+		// 	}, 25);
+		// });
 
 		// Fix: Placeholder polyfill.
 		$('form').placeholder();
