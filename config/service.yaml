@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:  
-  name: landing-svc
+  name: homepage-svc
   annotations:
     traefik.backend.circuitbreaker: "NetworkErrorRatio() > 0.5"
 spec:
   selector:    
-    app: au-hacks-landing 
+    app: homepage
   ports:  
   - name: http
     port: 80

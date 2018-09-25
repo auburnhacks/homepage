@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: au-hacks-landing 
+    name: homepage
     namespace: default
     labels:
-        app: au-hacks-landing
+        app: homepage
 spec:
     replicas: 2
     selector:
         matchLabels:
-            app: au-hacks-landing
+            app: homepage
     template:
         metadata:
             labels:
-                app: au-hacks-landing
+                app: homepage
         spec:
             containers:
             - name: server
