@@ -18,7 +18,9 @@ const (
 	Mega SponsorLevel = "mega"
 	Giga SponsorLevel = "giga"
 	Tera SponsorLevel = "tera"
-	Aux  SponsorLevel = "aux"
+	// Aux refers to an auxilary type of sponsor who doesn't
+	// belong to the categories above
+	Aux SponsorLevel = "aux"
 )
 
 type AuburnHacks struct {

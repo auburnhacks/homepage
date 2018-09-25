@@ -6,7 +6,7 @@ metadata:
     labels:
         app: homepage
 spec:
-    replicas: 2
+    replicas: 1
     selector:
         matchLabels:
             app: homepage
@@ -17,7 +17,7 @@ spec:
         spec:
             containers:
             - name: server
-              image: kirandasika30/au-hacks-landing
+              image: kirandasika30/homepage
               imagePullPolicy: Always
               ports:
               - containerPort: 8321

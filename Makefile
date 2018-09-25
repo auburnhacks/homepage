@@ -20,8 +20,8 @@ release_sha:
 	GOOS=linux go build -v -a --ldflags '-extldflags	"-static"' -tags netgo -installsuffix netgo -o frontend
 	@echo "Built binary"
 	@echo "Building docker container"
-	docker build -t "kirandasika30/au-hacks-landing:$(SHA)" -f Dockerfile .
-	docker push "kirandasika30/au-hacks-landing:$(SHA)"
+	docker build -t "kirandasika30/homepage:$(SHA)" -f Dockerfile .
+	docker push "kirandasika30/homepage:$(SHA)"
 clean:
 	rm main
 kube:

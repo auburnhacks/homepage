@@ -44,6 +44,7 @@ func main() {
 	http.HandleFunc("/metadata", metadataHandler)
 
 	glog.Infof("starting server on %s pid: %d", *listenAddr, os.Getpid())
+	glog.Infof("reload config every %v", *pollDuration)
 
 	// global metadata object
 	meta = metadata.New(MetaFileURL)
