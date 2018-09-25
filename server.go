@@ -30,7 +30,7 @@ const (
 func init() {
 	staticDir = flag.String("static_dir", "static", "static files directory")
 	listenAddr = flag.String("listen_addr", "localhost:8321", "http serve address")
-	pollDuration = flag.Duration("poll_duration", 5, "poll duration for metadata watch")
+	pollDuration = flag.Duration("poll_duration", 3*time.Second, "poll duration for metadata watch")
 
 	flag.Set("v", "0")
 	flag.Set("logtostderr", "true")
@@ -49,7 +49,7 @@ func main() {
 	meta = metadata.New(MetaFileURL)
 
 	// start watching the file
-	go meta.Watch(*pollDuration * time.Minute)
+	go meta.Watch(*pollDuration)
 
 	c := make(chan os.Signal)
 	signal.Notify(c, syscall.SIGTERM, os.Interrupt)

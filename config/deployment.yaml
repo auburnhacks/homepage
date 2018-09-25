@@ -23,6 +23,7 @@ spec:
               - containerPort: 8321
               args:
               - --listen_addr=:8321
+              - --poll_duration=5m
               resources:
                 requests:
                   cpu: "20m"
