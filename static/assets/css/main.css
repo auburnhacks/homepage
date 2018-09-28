@@ -72,7 +72,7 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-	background-color: #03244d;
+	background-color: #dd550c;
     padding: 5px;
 	color: white;
 }
@@ -89,7 +89,7 @@
 }
 
 .button:hover {
-    background-color: #dd550c;
+    background-color: #03244d;
 	text-decoration: none;
 	color: white !important;
 	transition: all 0.3s;
