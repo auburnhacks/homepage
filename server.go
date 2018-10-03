@@ -24,7 +24,8 @@ var (
 )
 
 const (
-	MetaFileURL = "https://drive.google.com/uc?id=1AXg6vBbyZ4XR7m8skvQ_062ZEgfGdGvX&export=download"
+	MetaFileURL         = "https://drive.google.com/uc?id=1AXg6vBbyZ4XR7m8skvQ_062ZEgfGdGvX&export=download"
+	VolunteerSignUpForm = "https://docs.google.com/forms/d/e/1FAIpQLSeYHqerbluQAevVPwTrCXjhk5aCfyUXJyXeufNPAx92UebZXQ/viewform"
 )
 
 func init() {
@@ -42,6 +43,7 @@ func main() {
 	http.Handle("/", http.FileServer(http.Dir(*staticDir)))
 	http.HandleFunc("/healthz", health)
 	http.HandleFunc("/metadata", metadataHandler)
+	http.HandleFunc("/volunteer", volunteerRedirect)
 
 	glog.Infof("starting server on %s pid: %d", *listenAddr, os.Getpid())
 	glog.Infof("reload config every %v", *pollDuration)
@@ -80,4 +82,9 @@ func metadataHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Write(bb)
+}
+
+func volunteerRedirect(w http.ResponseWriter, r *http.Request) {
+	glog.Infof("redirecting to volunteer sign up form")
+	http.Redirect(w, r, VolunteerSignUpForm, 302)
 }
