@@ -1,7 +1,6 @@
 package main
 
 import (
-	"auburn-hacks-landing/metadata"
 	"encoding/json"
 	"flag"
 	"fmt"
@@ -12,6 +11,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/auburnhacks/homepage/metadata"
 	"github.com/golang/glog"
 )
 
