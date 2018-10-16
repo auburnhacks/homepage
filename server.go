@@ -44,6 +44,7 @@ func main() {
 	http.HandleFunc("/healthz", health)
 	http.HandleFunc("/metadata", metadataHandler)
 	http.HandleFunc("/volunteer", volunteerRedirect)
+	http.HandleFunc("/register", registrationRedirect)
 
 	glog.Infof("starting server on %s pid: %d", *listenAddr, os.Getpid())
 	glog.Infof("reload config every %v", *pollDuration)
@@ -87,4 +88,9 @@ func metadataHandler(w http.ResponseWriter, r *http.Request) {
 func volunteerRedirect(w http.ResponseWriter, r *http.Request) {
 	glog.Infof("redirecting to volunteer sign up form")
 	http.Redirect(w, r, VolunteerSignUpForm, 302)
+}
+
+func registrationRedirect(w http.ResponseWriter, r *http.Request) {
+	glog.Infof("redirecting to registration subdomain")
+	http.Redirect(w, r, "https://registration.auburnhacks.com", 302)
 }
