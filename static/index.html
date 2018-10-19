@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
 
 		<!-- Meta-tags -->
 		<meta name="keywords" content="auburnhacks 2019, hackathon, auburn university, auburn, hacks, mlh">
@@ -228,12 +229,12 @@
 
 			<!-- Footer -->
 			<footer id="footer">
-				<section style="color:#03244d">
-					<h2 style="color:#03244d">Stay Connected!</h2>
+				<section>
+					<h2>Stay Connected!</h2>
 					<dl class="alt">
-						<dt style="color:#03244d">Address</dt>
+						<dt>Address</dt>
 						<dd>3101 Shelby Center &bull; Auburn, AL 36849 &bull; USA</dd>
-						<dt style="color:#03244d">Email</dt>
+						<dt>Email</dt>
 						<dd><a href="mailto:staff@auburnhacks.com?subject=AuburnHacks%202019:%20Inquiry" target="top">staff@auburnhacks.com</a></dd>
 					</dl>
 					<ul class="icons">
@@ -254,5 +255,19 @@
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+		<script>
+			var pattern = Trianglify({
+				height: document.documentElement.scrollHeight,
+				width: window.innerWidth,
+				cell_size: 90 + Math.random() * 100,
+				variance: Math.random(),
+				stroke_width: 1.5 + Math.random(),
+				x_colors: 'Blues',
+				y_colors: 'match_x'
+			});
+
+			document.body.style.background = 'url(' + pattern.canvas().toDataURL() + ')';
+		</script>
 	</body>
 </html>
