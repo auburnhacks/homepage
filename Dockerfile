@@ -7,7 +7,7 @@ RUN mkdir -p /go/src \
 ENV GOPATH=/go
 ENV PATH=$PATH:$GOPATH/bin
 
-WORKDIR $GOPATH/src/homepage
+WORKDIR $GOPATH/src/github.com/auburnhacks/homepage
 RUN apk update && apk add git
 RUN go get -u github.com/golang/dep/cmd/dep
 COPY Gopkg.* ./
@@ -24,7 +24,8 @@ RUN apk update \
     && apk add ca-certificates \
     && rm -rf /var/cache/apk/*
 # Copy executable from current directory
-COPY --from=build /go/src/homepage/homepage .
+COPY --from=build /go/src/github.com/auburnhacks/homepage/homepage .
+RUN chmod +x homepage
 # Copy static assets from current directory
 COPY ./static/. ./static
 EXPOSE 8321
