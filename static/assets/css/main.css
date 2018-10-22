@@ -14,6 +14,12 @@
 	z-index: 11000;
 }
 
+@media only screen and (max-width: 425px) {
+	.logoTitle {
+		width: 60%;
+	}
+}
+
 #fullpage {
 	height: 100vh;
 	overflow: hidden;
@@ -73,8 +79,13 @@
     -moz-border-radius: 5px;
     border-radius: 5px;
 	background-color: #dd550c;
-    padding: 5px;
+    padding: 10px;
 	color: white;
+}
+@media only screen and (max-width: 425px) {
+	.button {
+		width: 65%;
+	}
 }
 
 .button:focus {
@@ -1048,7 +1059,7 @@
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 768px) {
 
 			.spotlight .image {
 				padding: 0.35em;
@@ -1059,6 +1070,13 @@
 					height: 150px;
 				}
 
+		}
+
+		@media screen and (max-width: 425px) {
+			.spotlight .image img {
+				width: 100px;
+				height: 100px;
+			}
 		}
 
 	.spotlight .image {
@@ -1111,17 +1129,13 @@
 				-ms-transition-delay: 0s;
 				transition-delay: 0s;
 				display: block;
-				width: 100%;
 				height: auto;
 				margin: auto;
 				align-self: center;
+				margin-top: -15%; 
+				margin-bottom: -20%; 
+				width: 70%;
 			}
-
-				#header.alt .logo img {
-					display: block;
-					margin: 0 auto;
-					max-width: 50%;
-				}
 
 		@media screen and (max-width: 1280px) {
 
@@ -1132,10 +1146,12 @@
 				#header.alt {
 					padding: 0em 4em 0em 4em ;
 				}
-					#header.alt .logo img {
+					#header.alt .logo {
 						display: block;
 						margin: 0 auto;
-						max-width: 100%;
+						max-width: 80%;
+						margin-top: -15%; 
+						margin-bottom: -20%; 
 					}
 		}
 
@@ -1148,10 +1164,12 @@
 				#header.alt {
 					padding: 0em 3em 0em 3em ;
 				}
-					#header.alt .logo img {
+					#header.alt .logo {
 						display: block;
 						margin: 0 auto;
-						max-width: 100%;
+						max-width: 80%;
+						margin-top: -15%; 
+						margin-bottom: -20%; 
 					}
 		}
 
@@ -1178,10 +1196,12 @@
 						font-size: 2.5em;
 					}
 					
-					#header.alt .logo img {
+					#header.alt .logo {
 						display: block;
 						margin: 0 auto;
-						max-width: 100%;
+						max-width: 80%;
+						margin-top: -15%; 
+						margin-bottom: -20%; 
 					}
 		}
 
@@ -1194,27 +1214,31 @@
 				#header.alt {
 					padding: 0em 1.5em 0em 1.5em ;
 				}
-					#header.alt .logo img {
+					#header.alt .logo {
 						display: block;
 						margin: 0 auto;
 						max-width: 100%;
+						margin-top: -15%; 
+						margin-bottom: -20%; 
 					}
 		}
 
-		@media screen and (max-width: 360px) {
+		@media only screen and (max-width:360px) {
 
 			#header {
 				padding: 0em 1em 0em 1em ;
 			}
 
-				#header.alt {
-					padding: 0em 1em 0em 1em ;
-				}
-					#header.alt .logo img {
-						display: block;
-						margin: 0 auto;
-						max-width: 100%;
-					}
+			#header.alt {
+				padding: 0em 1em 0em 1em ;
+			}
+			#header.alt .logo {
+				display: block;
+				margin: 0 auto;
+				width: 100%;
+				margin-top: -15%; 
+				margin-bottom: -20%;
+			}
 		}
 
 		body.is-loading #header.alt > * {
