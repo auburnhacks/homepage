@@ -25,6 +25,7 @@ const (
 
 type AuburnHacks struct {
 	metaFileURL string
+	hc          http.Client
 	// mu gaurds all the variables below.
 	mu sync.RWMutex
 
@@ -48,6 +49,7 @@ type Sponsor struct {
 func New(metaFileURL string) *AuburnHacks {
 	auHack := &AuburnHacks{
 		metaFileURL: metaFileURL,
+		hc:          http.Client{},
 	}
 
 	// not updating metadata in this function as the watch
@@ -109,12 +111,11 @@ func (c *AuburnHacks) updateMetadata(newData []byte) error {
 }
 
 func (c *AuburnHacks) getMetadata() ([]byte, error) {
-	hc := http.Client{}
 	req, err := http.NewRequest("GET", c.metaFileURL, nil)
 	if err != nil {
 		return nil, err
 	}
-	resp, err := hc.Do(req)
+	resp, err := c.hc.Do(req)
 	if err != nil {
 		return nil, err
 	}
