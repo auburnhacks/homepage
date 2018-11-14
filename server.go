@@ -24,7 +24,9 @@ var (
 )
 
 const (
-	MetaFileURL         = "https://drive.google.com/uc?id=1AXg6vBbyZ4XR7m8skvQ_062ZEgfGdGvX&export=download"
+	// MetaFileURL is a url to fetch metadata from
+	MetaFileURL = "https://drive.google.com/uc?id=1AXg6vBbyZ4XR7m8skvQ_062ZEgfGdGvX&export=download"
+	// VolunteerSignUpForm is the link to volunteer signup form for AuburnHacks 2019
 	VolunteerSignUpForm = "https://docs.google.com/forms/d/e/1FAIpQLSeYHqerbluQAevVPwTrCXjhk5aCfyUXJyXeufNPAx92UebZXQ/viewform"
 )
 
