@@ -31,6 +31,18 @@
 	}
 }
 
+@media only screen and (max-width: 425px) {
+	.logoTitle {
+		width: 60%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.logoTitle {
+		width: 60%;
+	}
+}
+
 .teraSponsor {
 	margin-top: -2%;
 	margin-bottom: -3%;
@@ -1245,8 +1257,9 @@
 					#header.alt .logo {
 						display: block;
 						margin: 0 auto;
-						max-width: 80%;
-						margin-top: -15%; 
+						min-width: 80%;
+						max-width: 90%;
+						margin-top: -20%; 
 						margin-bottom: -20%; 
 					}
 		}
@@ -1263,7 +1276,7 @@
 					#header.alt .logo {
 						display: block;
 						margin: 0 auto;
-						max-width: 80%;
+						width: 100%;
 						margin-top: -15%; 
 						margin-bottom: -20%; 
 					}
@@ -1295,7 +1308,7 @@
 					#header.alt .logo {
 						display: block;
 						margin: 0 auto;
-						max-width: 80%;
+						width: 100%;
 						margin-top: -15%; 
 						margin-bottom: -20%; 
 					}
