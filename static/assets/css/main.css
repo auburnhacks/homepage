@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @font-face { font-family: myriadPro; src: url('../fonts/Myriad-Pro.ttf'); }
 
+:root {
+	--blue-primary: #03244d;
+	--orange-primary: #dd550c;
+}
+
 /* Personalization */
 #mlh-trust-badge {
 	display: block;
@@ -14,15 +19,10 @@
 	z-index: 11000;
 }
 
-@media only screen and (max-width: 425px) {
-	.logoTitle {
-		width: 60%;
-	}
-}
-
-#fullpage {
-	height: 100vh;
-	overflow: hidden;
+.grid {
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 5px;
+	display: grid;
 }
 
 @media only screen and (max-width: 500px) {
@@ -30,42 +30,82 @@
 		right: 15px;
 	}
 }
-.grid {
-	grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-	grid-gap: 5px;
+
+.teraSponsor {
+	margin-top: -3%;
+	margin-bottom: -3%;
+}
+
+.teraSponsor img {
+	width: 50%;
+	margin: auto;
+}
+
+.megaSponsor {
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 10px;
 	display: grid;
 }
 
-.card-container {
-	cursor: auto;
-	perspective: 600;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	width: 290px;
-	height: 290px !important;
+.megaSponsor img {
+	width: 90%;
+	margin: auto;
 }
 
-.card {
-	width: 100%;
-	border: 1px;
-	border-radius: 5px;
-	padding: 10px;
-	box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
-	margin: 5px;
-	line-height: 1.5;
-	font-size: 14px;
-	height: 270px;
-	text-align: center;
+.kiloSponsor img {
+	width: 15%;
+	margin: auto;
 }
 
-.card #question {
-	margin-bottom: 10px;
-	font-family: myriadPro;
-	border-bottom: 2px solid #dd550c;
+@media only screen and (max-width: 929px) {
+	.megaSponsor {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-gap: 10px;
+		display: grid;
+	}
+
+	.megaSponsor img {
+		width: 80%;
+		margin: auto;
+	}
 }
 
+@media only screen and (max-width: 768px) {
+	.megaSponsor {
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		grid-gap: 10px;
+		display: grid;
+	}
+
+	.megaSponsor img {
+		width: 80%;
+		margin: auto;
+	}
+}
+
+@media only screen and (max-width: 597px) {
+	.teraSponsor img {
+		width: 80%
+	}
+	.megaSponsor {
+		grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+		grid-gap: 10px;
+		display: grid;
+	}
+
+	.megaSponsor img {
+		width: 100%;
+		margin: auto;
+	}
+}
+
+@media only screen and (max-width: 597px) {
+	.kiloSponsor img {
+		width: 25%;
+	}
+}
+
+/* Custom Button */
 .button {
     display: block;
     width: 30%;
@@ -78,14 +118,10 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-	background-color: #dd550c;
+	background-color: var(--orange-primary);
+	transition: 0.2s ease-in-out;
     padding: 10px;
 	color: white;
-}
-@media only screen and (max-width: 425px) {
-	.button {
-		width: 65%;
-	}
 }
 
 .button:focus {
@@ -96,6 +132,7 @@
 @media only screen and (max-width: 768px) {
 	.button {
 		font-size: 14px;
+		width: 60%;
 	}
 }
 
@@ -103,9 +140,10 @@
     background-color: #03244d;
 	text-decoration: none;
 	color: white !important;
-	transition: all 0.3s;
+	transition: 0.2s ease-in-out;
 }
 
+/* Google Maps Embed */
 .mapouter {
 	text-align:right;
 	height:300px;
@@ -117,6 +155,61 @@
 	background:none!important;
 	height:300px;
 	width:auto;
+}
+
+/* Accordion for FAQs */
+.accordion {
+    background-color: #43a8e7;
+    color: #eee;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.2s ease-in-out;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	font-family: myriadPro;
+	font-size: 18px;
+}
+
+.active, .accordion:hover {
+    background-color: #03244d;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+	margin-left: 5px;
+	margin: auto;
+}
+
+.accordion.active:after {
+    content: "\2212";
+	color: white;
+	margin: auto;
+}
+
+.panel {
+    padding: 0px 10px;
+    background-color: whitesmoke;
+    max-height: 0;
+	overflow: hidden;
+	text-align: left;
+    transition: max-height 0.4s ease-in-out;
+    border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	font-size: 15px;
+	margin: 5px;
+}
+.panel p {
+	margin: 5px;
 }
 
 /* Reset */
@@ -580,6 +673,8 @@
 		.image img {
 			border-radius: 8px;
 			display: block;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		.image.left, .image.right {
