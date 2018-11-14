@@ -17,10 +17,10 @@ release:
 	docker push "kirandasika30/au-hacks-landing:latest"
 release_sha:
 	@echo "Building binary for linux..."
-	GOOS=linux go build -v -a --ldflags '-extldflags	"-static"' -tags netgo -installsuffix netgo -o frontend
+	GOOS=linux go build -v -a --ldflags '-extldflags	"-static"' -tags netgo -installsuffix netgo -o homepage
 	@echo "Built binary"
 	@echo "Building docker container"
-	docker build -t "kirandasika30/homepage:$(SHA)" -f Dockerfile .
+	docker build -t "kirandasika30/homepage:$(SHA)" -f min.Dockerfile .
 	docker push "kirandasika30/homepage:$(SHA)"
 clean:
 	rm main
