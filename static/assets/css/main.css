@@ -63,6 +63,10 @@
 .megaSponsor img {
 	width: 90%;
 	margin: auto;
+	/*
+	* FIXME: delete this later
+	*/
+	margin-left: 10em;
 }
 
 .kiloSponsor img {
