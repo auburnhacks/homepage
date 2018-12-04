@@ -34,6 +34,31 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-124906144-1');
 		</script>
+
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+		<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+				acc[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if (panel.style.maxHeight){
+						panel.style.maxHeight = null;
+					} else {
+						panel.style.maxHeight = panel.scrollHeight + "px";
+					} 
+				});
+			}
+		</script>
 	</head>
 	<body>
 		<!-- MLH Trust Badge -->
@@ -49,9 +74,9 @@
 				<header id="header" class="alt">
 					<section>
 						<div class="circle">
-							<img src="images/logo.svg" class="logo" alt="auburnhacks logo - tiger's head">
+							<img src="images/brand/logo.svg" class="logo" alt="auburnhacks logo - tiger's head">
 						</div>
-						<img alt="AuburnHacks 2019" class="logoTitle" src="images/title.png" width="40%;">
+						<img alt="AuburnHacks 2019" class="logoTitle" src="images/brand/title.svg" width="40%;">
 						<h2 style="font-family:myriadPro; color: #03244d;">February 2 - 3, 2019</h2>
 						<p style="color: #03244d;">Auburn University's First Hackathon</p>
 					</section>
@@ -104,16 +129,16 @@
 							<p>This event would not have been possible without the support 
 								shown to us by Auburn University's Computer Science &amp; Software Engineering Department 
 								and all of our sponsors.</p>
-							<div class="teraSponsor">
-								<!-- <img src="./images/Equifax.svg"> -->
-							</div>
 							<div class="megaSponsor">
-								<img src="./images/BentleySystems.svg">
-								<!-- <img src="./images/ExxonMobil.svg"> -->
-								<img src="./images/Tsys.svg">
+								<img src="./images/sponsors/BentleySystems.svg">
+								<img src="./images/sponsors/ExxonMobil.svg">
+								<img src="./images/sponsors/Tsys.svg">
 							</div>
 							<div class="kiloSponsor">
-								<img src="./images/Workiva.svg">
+								<img class="hidden-xs">
+								<img src="./images/sponsors/Linode.svg">
+								<img src="./images/sponsors/Workiva.svg">
+								<img class="hidden-xs">
 							</div>
 							<br>
 							<p>If you would like to sponsor our event, check out our prospectus and reach out to us at 
@@ -213,7 +238,7 @@
 									</div>
 								</div>
 								<div>
-									<button class="accordion">I am traveling by air to attend AuburnHacks, what should I know?</button>
+									<button class="accordion">What if I am traveling by air?</button>
 									<div class="panel">
 										<p>If you're traveling by air, the closest airport to Auburn University is the Hartsfield-Jackson
 										 Atlanta International Airport, which is approximately an hour and forty minutes away 
@@ -241,7 +266,7 @@
 			<!-- Footer -->
 			<footer id="footer">
 				<section>
-					<h2>Stay Connected!</h2>
+					<h1 style="font-family:myriadPro;">Stay Connected!</h1>
 					<dl class="alt">
 						<dt>Address</dt>
 						<dd>3101 Shelby Center &bull; Auburn, AL 36849 &bull; USA</dd>
@@ -249,24 +274,14 @@
 						<dd><a href="mailto:staff@auburnhacks.com?subject=AuburnHacks%202019:%20Inquiry" target="top">staff@auburnhacks.com</a></dd>
 					</dl>
 					<ul class="icons">
-						<li><a href="https://www.twitter.com/AuburnHacks" target="_blank"><img src="https://auburn.edu/administration/housing/images/homepage/getConnectedIcons/twitterOrange.svg"></a></li>
-						<li><a href="https://www.facebook.com/AuburnHacks" target="_blank"><img src="https://auburn.edu/administration/housing/images/homepage/getConnectedIcons/facebookOrange.svg"></a></li>
-						<li><a href="https://www.instagram.com/AuburnHacks" target="_blank"><img src="https://auburn.edu/administration/housing/images/homepage/getConnectedIcons/instagramOrange.svg"></a></li>
+						<li><a href="https://www.twitter.com/AuburnHacks" target="_blank"><img src="./images/brand/twitterOrange.svg"></a></li>
+						<li><a href="https://www.facebook.com/AuburnHacks" target="_blank"><img src="./images/brand/facebookOrange.svg"></a></li>
+						<li><a href="https://www.instagram.com/AuburnHacks" target="_blank"><img src="./images/brand/instagramOrange.svg"></a></li>
 					</ul>
 				</section>
 
 			</footer>
 		</div>
-
-		<!-- Scripts -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src='./assets/js/jquery.fullpage.min.js'></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/skel.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
 		<script>
 			var pattern = Trianglify({
 				height: document.documentElement.scrollHeight,
@@ -279,22 +294,6 @@
 			});
 
 			document.body.style.background = 'url(' + pattern.canvas().toDataURL() + ')';
-		</script>
-		<script>
-			var acc = document.getElementsByClassName("accordion");
-			var i;
-
-			for (i = 0; i < acc.length; i++) {
-			acc[i].addEventListener("click", function() {
-				this.classList.toggle("active");
-				var panel = this.nextElementSibling;
-				if (panel.style.maxHeight){
-				panel.style.maxHeight = null;
-				} else {
-				panel.style.maxHeight = panel.scrollHeight + "px";
-				} 
-			});
-			}
 		</script>
 	</body>
 </html>
