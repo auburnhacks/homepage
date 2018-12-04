@@ -1,32 +1,25 @@
-FROM golang:1.10-alpine as build
+FROM golang:1.10 as builder
 
-RUN mkdir -p /go/src \
-    && mkdir -p /go/bin \
-    && mkdir -p /go/pkg
-
-ENV GOPATH=/go
-ENV PATH=$PATH:$GOPATH/bin
+# Using dep v0.5.0
+ADD https://github.com/golang/dep/releases/download/v0.5.0/dep-linux-amd64 /usr/bin/dep
+RUN chmod +x /usr/bin/dep
 
 WORKDIR $GOPATH/src/github.com/auburnhacks/homepage
-RUN apk update && apk add git
-RUN go get -u github.com/golang/dep/cmd/dep
-COPY Gopkg.* ./
-RUN dep ensure -vendor-only
-#COPY . .
-ADD ./metadata .
-RUN CGO_ENABLED=0 go install -a std
-RUN CGO_ENABLED=0 GOOS='linux' go build -a -ldflags '-extldflags "-static"' -installsuffix cgo -o homepage .
+COPY Gopkg.toml Gopkg.lock ./
+RUN dep ensure -v -vendor-only
+COPY . ./
+RUN CGO_ENABLED=0 GOOS=linux go build -v -a -installsuffix nocgo -o homepage .
 
+# Release Image
 FROM alpine:latest
 WORKDIR /app
 # Run update on alpine and create ssl certificates
 RUN apk update \
     && apk add ca-certificates \
     && rm -rf /var/cache/apk/*
-# Copy executable from current directory
-COPY --from=build /go/src/github.com/auburnhacks/homepage/homepage .
-RUN chmod +x homepage
-# Copy static assets from current directory
+# Copy executable from builder step
+COPY --from=builder go/src/github.com/auburnhacks/homepage/homepage ./
 COPY ./static/. ./static
+RUN chmod +x homepage
 EXPOSE 8321
 ENTRYPOINT [ "./homepage" ]
