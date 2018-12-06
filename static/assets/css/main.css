@@ -62,7 +62,8 @@
 }
 
 .kiloSponsor {
-	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+	grid-gap: 10px;
 	display: grid;
 }
 
@@ -77,8 +78,16 @@
 }
 
 .kiloSponsor img {
-	width: 35%;
+	width: 45%;
 	margin: auto;
+}
+
+#big {
+	width: 55%;
+}
+
+#small {
+	width: 35%;
 }
 
 /* Responsiveness Sponsor Logos */
@@ -88,12 +97,20 @@
 	}
 
 	.kiloSponsor img {
-		width: 40%;
+		width: 50%;
 	}
 
 	.kiloSponsor {
-		grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
 		display: grid;
+	}
+
+	#big {
+		width: 60%;
+	}
+
+	#small {
+		width: 40%;
 	}
 }
 
@@ -101,12 +118,26 @@
 	.megaSponsor img {
 		width: 100%;
 	}
+
 	.megaSponsor {
 		grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
 	}
 
+	.kiloSponsor {
+		grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+		display: grid;
+	}	
+
 	.kiloSponsor img {
-		width: 50%;
+		width: 55%;
+	}
+
+	#big {
+		width: 65%;
+	}
+
+	#small {
+		width: 40%;
 	}
 }
 
