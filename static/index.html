@@ -297,16 +297,17 @@
 		</script>
 		<script>
 			var pattern = Trianglify({
-				height: document.documentElement.scrollHeight,
+				height: window.innerHeight,
 				width: window.innerWidth,
 				cell_size: 90 + Math.random() * 100,
 				variance: Math.random(),
-				stroke_width: 1.5 + Math.random(),
+				stroke_width: 1.8 + Math.random(),
 				x_colors: 'Blues',
 				y_colors: 'match_x'
 			});
 
 			document.body.style.background = 'url(' + pattern.canvas().toDataURL() + ')';
+			document.body.style.backgroundAttachment = 'fixed';
 		</script>
 	</body>
 </html>
