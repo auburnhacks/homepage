@@ -11,7 +11,6 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/auburnhacks/homepage/metadata"
 	"github.com/golang/glog"
 )
 
@@ -20,7 +19,7 @@ var (
 	listenAddr   *string
 	pollDuration *time.Duration
 
-	meta *metadata.AuburnHacks
+	//meta *metadata.AuburnHacks
 )
 
 const (
@@ -44,7 +43,7 @@ func init() {
 func main() {
 	http.Handle("/", http.FileServer(http.Dir(*staticDir)))
 	http.HandleFunc("/healthz", health)
-	http.HandleFunc("/metadata", metadataHandler)
+	//http.HandleFunc("/metadata", metadataHandler)
 	http.HandleFunc("/volunteer", volunteerRedirect)
 	http.HandleFunc("/register", registrationRedirect)
 
@@ -52,10 +51,10 @@ func main() {
 	glog.Infof("reload config every %v", *pollDuration)
 
 	// global metadata object
-	meta = metadata.New(MetaFileURL)
+	//meta = metadata.New(MetaFileURL)
 
 	// start watching the file
-	go meta.Watch(*pollDuration)
+	//go meta.Watch(*pollDuration)
 
 	c := make(chan os.Signal)
 	signal.Notify(c, syscall.SIGTERM, os.Interrupt)
