@@ -25,9 +25,9 @@ func init() {
 }
 
 func main() {
+	// http.Handle("/", http.FileServer(http.Dir(*staticDir)))
 	http.Handle("/", http.FileServer(http.Dir(*staticDir)))
 	http.HandleFunc("/healthz", health)
-	//http.HandleFunc("/metadata", metadataHandler)
 
 	addr := ""
 	port := os.Getenv("PORT")
